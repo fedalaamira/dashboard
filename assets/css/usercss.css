@@ -1,0 +1,219 @@
+html, body {
+    height: 100%;
+  }
+form.form-group input{
+    border-radius: 20px;
+  }
+  .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:5vmin;
+  }
+
+
+  .button {
+     
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .button:hover {
+    background-color: #DCC209;
+    box-shadow: 0px 15px 20px rgba(206, 219, 23, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+.radio {
+  padding-left: 20px;
+}
+
+.radio label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+
+.radio label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+
+.radio label::after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 11px;
+  height: 11px;
+  left: 3px;
+  top: 3px;
+  margin-left: -20px;
+  border-radius: 50%;
+  background-color: #F6DA14;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+}
+
+.radio input[type="radio"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.radio input[type="radio"]:checked + label::after {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.radio input[type="radio"]:disabled + label {
+  opacity: 0.65;
+}
+
+.radio input[type="radio"]:disabled + label::before {
+  cursor: not-allowed;
+}
+
+
+input[type="file"] {
+	display : none;
+}
+
+#file-drag {
+	border        : 2px dashed rgba(168, 168, 168, 0.747);
+	border-radius : 9px;
+	color         : #555;
+	cursor        : pointer;
+	display       : block;
+	font-weight   : bold;
+	margin        : 1em 0;
+	padding       : 0.5em;
+  text-align    : center;
+	transition    : background 0.3s, color 0.3s;
+}
+
+#file-drag:hover {
+	background : #FFFFFF;
+}
+
+#file-drag:hover,
+#file-drag.hover {
+	border-color : #F6DA14;
+	border-style : solid;
+	box-shadow   : inset 0 0.5px 0.5px #F6DA14;
+	color        : rgb(77, 77, 77);
+}
+
+#file-progress {
+	display : none;
+	margin  : 1em auto;
+	width   : 100%;
+}
+
+
+
+#file-upload-form {
+	margin : auto;	
+  width  : 80%;
+ 
+}
+
+progress {
+	appearance    : none;
+	background    : #eee;
+	border        : none;
+	border-radius : 3px;
+	box-shadow    : 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+	height        : 30px;
+}
+
+progress[value]::-webkit-progress-value {
+	background :
+		-webkit-linear-gradient(-45deg, 
+			transparent 33%,
+			rgba(0, 0, 0, .2) 33%, 
+			rgba(0,0, 0, .2) 66%,
+			transparent 66%),
+		-webkit-linear-gradient(right,
+			#005f95,
+			#07294d);
+	background :
+		linear-gradient(-45deg, 
+			transparent 33%,
+			rgba(0, 0, 0, .2) 33%, 
+			rgba(0,0, 0, .2) 66%,
+			transparent 66%),
+		linear-gradient(right,
+			#005f95,
+			#07294d);
+	background-size : 60px 30px, 100% 100%, 100% 100%;
+	border-radius   : 3px;
+}
+
+progress[value]::-moz-progress-bar {
+	background :
+	-moz-linear-gradient(-45deg, 
+		transparent 33%,
+		rgba(0, 0, 0, .2) 33%, 
+		rgba(0,0, 0, .2) 66%,
+		transparent 66%),
+	-moz-linear-gradient(right,
+		#005f95,
+		#07294d);
+	background :
+		linear-gradient(-45deg, 
+			transparent 33%,
+			rgba(0, 0, 0, .2) 33%, 
+			rgba(0,0, 0, .2) 66%,
+			transparent 66%),
+		linear-gradient(right,
+			#005f95,
+			#07294d);
+	background-size : 60px 30px, 100% 100%, 100% 100%;
+	border-radius   : 3px;
+}
+
+ul {
+	list-style-type : none;
+	margin          : 0;
+	padding         : 0;
+}
